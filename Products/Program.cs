@@ -28,21 +28,20 @@ switch (Convert.ToInt32(OperationNumber))
         break;
 }
 Answer:
-Console.WriteLine("What do you want? leave or continue");
+Console.WriteLine("What do you want? ");
+Console.WriteLine("Select one:");
+Console.WriteLine("1.Leave.");
+Console.WriteLine("2.Continue");
 string Answer = Console.ReadLine();
 Console.Clear();
-if (Answer == "continue")
+switch (Convert.ToInt32(Answer))
 {
-    goto Top;
-}
-else if (Answer == "leave")
-{
-    goto End;
-}
-else
-{
-    Console.WriteLine("You type wrong word.Please try again.");
-    goto Answer;
+    case 1:
+        goto End;
+
+    case 2:
+        goto Top;
+        
 }
 End:
 Console.ReadKey();

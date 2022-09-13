@@ -16,13 +16,20 @@ namespace Products
         }
         public List<Products> SelectbyCode(string code)
         {
+           // List<Products> list = new List<Products>();
             Products product = new Products();
-            foreach (var item in list)
+            foreach (Products item in list)
             {
                 if (item.Code == code)
                 {
+                    product.Code = item.Code;
+                    product.Name = item.Name;
+                    product.Quantity = item.Quantity;
+                    product.Cost = item.Cost;
+                    product = item;
                     list.Remove(product);
-
+                    //int Index = list.IndexOf(item);
+                    //list.RemoveAt(Index);
                 }
             }
             return list;
@@ -66,6 +73,7 @@ namespace Products
         }
         public void DeleteProduct()
         {
+            DisplayAllProducts();
             Console.WriteLine("Please type code which want to delete.");
             string Code_Delete = Console.ReadLine();
             SelectbyCode(Code_Delete);
@@ -100,7 +108,7 @@ namespace Products
                 Str_Product = Str_Product + item.Name + "|";
                 Str_Product = Str_Product + item.Quantity.ToString() + "|";
                 Str_Product = Str_Product + item.Code + "|";
-                Str_Product = Str_Product + item.Cost.ToString() + "|";
+                Str_Product = Str_Product + item.Cost.ToString() + "|"+"\n";
             }
             return Str_Product;
         }
