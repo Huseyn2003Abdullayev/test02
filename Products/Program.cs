@@ -41,7 +41,7 @@ switch(Convert.ToInt32(Answer))
     case 2:
         goto End;
     default:
-        Console.WriteLine("Please type correct number.");
+        Console.WriteLine(" Please type correct number.");
         goto Answer;
 }
 End:

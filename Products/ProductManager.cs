@@ -68,7 +68,7 @@ namespace Products
         public void DeleteProduct()
         {
             DisplayAllProducts();
-            Console.WriteLine("Please type code which want to delete.");
+            Console.WriteLine(" Please type code which want to delete.");
             string Code_Delete = Console.ReadLine();
             SelectbyCode(Code_Delete);
             string StrList = ConvertListToString(list);
