@@ -2,6 +2,7 @@
 using Products;
 
 ProductManager productManager = new ProductManager();
+//ProductDataService productDataService = new ProductDataService();
 Console.WriteLine("Please enter your name.");
 string name = Console.ReadLine();
 Top:
@@ -9,7 +10,7 @@ Console.WriteLine("Hello " + name + ".");
 Console.WriteLine("1.Insert product.");
 Console.WriteLine("2.Update product.");
 Console.WriteLine("3.Delete product.");
-Console.WriteLine("4.Display all products.");
+Console.WriteLine("4.Display all product.");
 string OperationNumber = Console.ReadLine();
 Console.Clear();
 switch (Convert.ToInt32(OperationNumber))
@@ -29,19 +30,19 @@ switch (Convert.ToInt32(OperationNumber))
 }
 Answer:
 Console.WriteLine("What do you want? ");
-Console.WriteLine("Select one:");
-Console.WriteLine("1.Leave.");
-Console.WriteLine("2.Continue");
+Console.WriteLine("1.Continue");
+Console.WriteLine("2.Leave");
 string Answer = Console.ReadLine();
 Console.Clear();
-switch (Convert.ToInt32(Answer))
+switch(Convert.ToInt32(Answer))
 {
     case 1:
-        goto End;
-
-    case 2:
         goto Top;
-        
+    case 2:
+        goto End;
+    default:
+        Console.WriteLine("Please type correct number.");
+        goto Answer;
 }
 End:
 Console.ReadKey();

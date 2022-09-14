@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,31 +9,22 @@ namespace Products
 {
     internal class ProductManager
     {
-        readonly List<Products> list = new List<Products>();
+         List<Products> list = new List<Products>();
+        readonly string path_ = @"C:\Users\user\Desktop\data_product_list.txt";
+        public ProductManager()
+        {
+            OpenFileAndReadToList();
+        }
         public void DisplayAllProducts()
         {
             string StrList = ConvertListToString(list);
             Console.WriteLine(StrList);
         }
-        public List<Products> SelectbyCode(string code)
+        public void SelectbyCode(string code)
         {
-           // List<Products> list = new List<Products>();
-            Products product = new Products();
-            foreach (Products item in list)
-            {
-                if (item.Code == code)
-                {
-                    product.Code = item.Code;
-                    product.Name = item.Name;
-                    product.Quantity = item.Quantity;
-                    product.Cost = item.Cost;
-                    product = item;
-                    list.Remove(product);
-                    //int Index = list.IndexOf(item);
-                    //list.RemoveAt(Index);
-                }
-            }
-            return list;
+            var itemToRemove = list.SingleOrDefault(r => r.Code == code);
+            if (itemToRemove != null)
+                list.Remove(itemToRemove);
         }
 
         public void InsertProduct()
@@ -50,6 +42,8 @@ namespace Products
             list.Add(product);
             string Str_Product = ConvertToString(product);
             OpenFileAndWrite(Str_Product);
+
+
         }
         public void UpdateProduct()
         {
@@ -80,17 +74,16 @@ namespace Products
             string StrList = ConvertListToString(list);
             OpenFileAndUpdate(StrList);
         }
-        //Product ConvertStringToObject(string str)
-        //{
-        //    Product product = new Product();
-        //    string[] words = str.Split('|');
-        //    product.name = words[0];
-        //    product.quantity = Convert.ToInt32(words[1]);
-        //    product.code = words[2];
-        //    product.cost = Convert.ToInt32(words[3]);
-        //    return product;
-
-        //}
+        Products ConvertStringToObject(string str)
+        {
+            Products product = new Products();
+            string[] words = str.Split('|');
+            product.Name = words[0];
+            product.Quantity = Convert.ToInt32(words[1]);
+            product.Code = words[2];
+            product.Cost = Convert.ToInt32(words[3]);          
+            return product;
+        }
         string ConvertToString(Products product)
         {
             string Str_Product = string.Empty;
@@ -114,16 +107,26 @@ namespace Products
         }
         public void OpenFileAndWrite(string Str_Product)
         {
-            string Path = "@example.txt";
-            using StreamWriter sw = new(AppDomain.CurrentDomain.BaseDirectory + Path, append: true);
+           // string Path = "@example.txt";
+            using StreamWriter sw = new( path_, append: true);
             sw.WriteLine(Str_Product);
         }
         public void OpenFileAndUpdate(string Str_Product)
         {
-            string Path = "@example.txt";
-            File.Delete(Path);
+           // string Path = "@example.txt";
+            File.Delete(path_);
             // Path.Remove(Convert.ToInt32(Path));
             OpenFileAndWrite(Str_Product);
+        }
+        void OpenFileAndReadToList()
+        {
+            string[] line = File.ReadAllLines(path_);
+
+            foreach (var item in line)
+            {
+                Products product = ConvertStringToObject(item);
+                list.Add(product);
+            }
         }
     }
 }
