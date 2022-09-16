@@ -14,6 +14,7 @@ namespace Products
         public ProductManager()
         {
             OpenFileAndReadToList();
+            DisplayAllProducts();
         }
         public void DisplayAllProducts()
         {
@@ -36,14 +37,22 @@ namespace Products
             Console.WriteLine("Please insert quantity of product.");
             product.Quantity = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Please insert code of product.");
+            Replace:
             product.Code = Console.ReadLine();
+            foreach (Products item in list)
+            {
+                if (item.Code == product.Code)
+                {
+                    Console.WriteLine("Please try again this number exist.");
+                    goto Replace;
+                }
+            }
             Console.WriteLine("Please insert cost of product.");
             product.Cost = Convert.ToInt32(Console.ReadLine());
             list.Add(product);
             string Str_Product = ConvertToString(product);
             OpenFileAndWrite(Str_Product);
-
-
+            DisplayAllProducts();
         }
         public void UpdateProduct()
         {
@@ -64,6 +73,7 @@ namespace Products
             list.Add(product);
             string StrList = ConvertListToString(list);
             OpenFileAndUpdate(StrList);
+            DisplayAllProducts();
         }
         public void DeleteProduct()
         {
@@ -76,12 +86,12 @@ namespace Products
         }
         Products ConvertStringToObject(string str)
         {
-            Products product = new Products();
+            Products product = new Products();           
             string[] words = str.Split('|');
             product.Name = words[0];
             product.Quantity = Convert.ToInt32(words[1]);
             product.Code = words[2];
-            product.Cost = Convert.ToInt32(words[3]);          
+            product.Cost = Convert.ToInt32(words[3]);
             return product;
         }
         string ConvertToString(Products product)
@@ -101,7 +111,7 @@ namespace Products
                 Str_Product = Str_Product + item.Name + "|";
                 Str_Product = Str_Product + item.Quantity.ToString() + "|";
                 Str_Product = Str_Product + item.Code + "|";
-                Str_Product = Str_Product + item.Cost.ToString() + "|"+"\n";
+                Str_Product = Str_Product + item.Cost.ToString() + "|" + "\n";
             }
             return Str_Product;
         }
