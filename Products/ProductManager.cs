@@ -34,8 +34,17 @@ namespace Products
             //List<Product> list = new List<Product>();
             Console.WriteLine("Please insert name of product.");
             product.Name = Console.ReadLine();
+            Replace1:
+            try
+            { 
             Console.WriteLine("Please insert quantity of product.");
             product.Quantity = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please insert number.");
+                goto Replace1;
+            }
             Console.WriteLine("Please insert code of product.");
             Replace:
             product.Code = Console.ReadLine();
@@ -47,8 +56,15 @@ namespace Products
                     goto Replace;
                 }
             }
+            try
+            { 
             Console.WriteLine("Please insert cost of product.");
             product.Cost = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please insert number.");
+            }
             list.Add(product);
             string Str_Product = ConvertToString(product);
             OpenFileAndWrite(Str_Product);
@@ -62,14 +78,35 @@ namespace Products
             SelectbyCode(Code_Update);
             Console.WriteLine("Please enter new name of product.");
             string newName = Console.ReadLine();
+            int newQuantity = 0;
+            Replace3:
+            try
+            { 
             Console.WriteLine("Please enter new quantity of product.");
-            string newQuantity = Console.ReadLine();
+             newQuantity = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please insert number.");
+                goto Replace3;
+            }
+            int newCost = 0;
+            Replace4:
+            try
+            { 
             Console.WriteLine("Please enter new cost of product.");
-            string newcost = Console.ReadLine();
+             newCost = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Please insert number.");
+                goto Replace4;
+            }
+
             product.Name = newName;
-            product.Quantity = Convert.ToInt32(newQuantity);
+            product.Quantity = newQuantity;
             product.Code = Code_Update;
-            product.Cost = Convert.ToInt32(newcost);
+            product.Cost = newCost;
             list.Add(product);
             string StrList = ConvertListToString(list);
             OpenFileAndUpdate(StrList);

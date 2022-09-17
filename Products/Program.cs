@@ -11,9 +11,17 @@ Console.WriteLine("1.Insert product.");
 Console.WriteLine("2.Update product.");
 Console.WriteLine("3.Delete product.");
 Console.WriteLine("4.Display all product.");
-string OperationNumber = Console.ReadLine();
+int OperationNumber = 0;
+try
+{ 
+OperationNumber = Convert.ToInt32(Console.ReadLine());
+}
+catch
+{
+    Console.WriteLine("Please insert number.");
+}
 Console.Clear();
-switch (Convert.ToInt32(OperationNumber))
+switch (OperationNumber)
 {
     case 1:
         productManager.InsertProduct();
@@ -28,11 +36,20 @@ switch (Convert.ToInt32(OperationNumber))
         productManager.DisplayAllProducts();
         break;
 }
-Answer:
 Console.WriteLine("What do you want? ");
 Console.WriteLine("1.Continue");
 Console.WriteLine("2.Leave");
-string Answer = Console.ReadLine();
+Answer:
+int Answer = 0;
+try
+{ 
+ Answer = Convert.ToInt32(Console.ReadLine());
+}
+catch
+{
+    Console.WriteLine("Please insert number.");
+    goto Answer;
+}
 Console.Clear();
 switch(Convert.ToInt32(Answer))
 {
