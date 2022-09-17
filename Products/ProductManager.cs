@@ -83,6 +83,7 @@ namespace Products
             SelectbyCode(Code_Delete);
             string StrList = ConvertListToString(list);
             OpenFileAndUpdate(StrList);
+            DisplayAllProducts();
         }
         Products ConvertStringToObject(string str)
         {
@@ -106,12 +107,26 @@ namespace Products
         string ConvertListToString(List<Products> list)
         {
             string Str_Product = string.Empty;
+            int index = 0;
             foreach (var item in list)
             {
+                index = list.IndexOf(item);
+            }
+            foreach (var item in list)
+            {
+               int index2 = list.IndexOf(item);
                 Str_Product = Str_Product + item.Name + "|";
                 Str_Product = Str_Product + item.Quantity.ToString() + "|";
                 Str_Product = Str_Product + item.Code + "|";
-                Str_Product = Str_Product + item.Cost.ToString() + "|" + "\n";
+                //Str_Product = Str_Product + item.Cost.ToString() + "|";
+                if (index2 == index)
+                {
+                    Str_Product = Str_Product + item.Cost.ToString() + "|";
+                }
+                else 
+                {
+                    Str_Product = Str_Product + item.Cost.ToString() + "|" + "\n";
+                }
             }
             return Str_Product;
         }
