@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Products", "Products\Products.csproj", "{DFAB1515-9232-4431-89E9-625A54653A55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "elebele", "elebele\elebele.csproj", "{FC068542-BB57-4619-ABAE-434BE917A5C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "elebele", "elebele\elebele.csproj", "{FC068542-BB57-4619-ABAE-434BE917A5C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cars", "Cars\Cars.csproj", "{D7E56C1A-4127-4495-BAE1-09A580D3ED72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FC068542-BB57-4619-ABAE-434BE917A5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC068542-BB57-4619-ABAE-434BE917A5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC068542-BB57-4619-ABAE-434BE917A5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7E56C1A-4127-4495-BAE1-09A580D3ED72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7E56C1A-4127-4495-BAE1-09A580D3ED72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7E56C1A-4127-4495-BAE1-09A580D3ED72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7E56C1A-4127-4495-BAE1-09A580D3ED72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
