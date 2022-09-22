@@ -11,7 +11,7 @@ namespace ConsoleApp2
     class ProductManager
     {
         readonly List<Product> list = new List<Product>();
-        public List<Product> Select()
+        public List<Product> DisplayAllProducts()
         {
             return null;
         }
@@ -73,17 +73,17 @@ namespace ConsoleApp2
             string StrList = ConvertListToString(list);
             OpenFileAndUpdate(StrList);
         }
-        Product ConvertStringToObject(string str)
-        {
-            Product product = new Product();
-            string[] words = str.Split('|');
-            product.name = words[0];
-            product.quantity = Convert.ToInt32(words[1]);
-            product.code = words[2];
-            product.cost = Convert.ToInt32(words[3]);
-            return product;
+        //Product ConvertStringToObject(string str)
+        //{
+        //    Product product = new Product();
+        //    string[] words = str.Split('|');
+        //    product.name = words[0];
+        //    product.quantity = Convert.ToInt32(words[1]);
+        //    product.code = words[2];
+        //    product.cost = Convert.ToInt32(words[3]);
+        //    return product;
             
-        }
+        //}
         string ConvertToString(Product product )
         {
             string Str_Product = string.Empty;
@@ -108,13 +108,14 @@ namespace ConsoleApp2
         public void OpenFileAndWrite(string Str_Product)
         {
             string Path = "@example.txt";
-            StreamWriter sw = File.AppendText(AppDomain.CurrentDomain.BaseDirectory + Path);
+            using StreamWriter sw = File.AppendText(AppDomain.CurrentDomain.BaseDirectory + Path);
             sw.WriteLine(Str_Product);
         }
         public void OpenFileAndUpdate(string Str_Product)
         {
             string Path = "@example.txt";
-            Path.Remove(Convert.ToInt32(Path));
+            File.Delete(Path);
+           // Path.Remove(Convert.ToInt32(Path));
             OpenFileAndWrite(Str_Product);
         }
 

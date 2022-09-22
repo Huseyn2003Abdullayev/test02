@@ -10,6 +10,7 @@ Console.WriteLine("1.Insert car.");
 Console.WriteLine("2.Update car.");
 Console.WriteLine("3.Delete car.");
 Console.WriteLine("4.Display all cars.");
+Console.WriteLine("5.Display cars by brand.");
 int OperationNumber = 0;
 try
 {
@@ -33,6 +34,9 @@ switch (OperationNumber)
         break;
     case 4:
         carsDataManager.DisplayAllCars();
+        break;
+    case 5:
+        carsDataManager.DisplayCarsByFilters();
         break;
 }
 Console.WriteLine("What do you want? ");

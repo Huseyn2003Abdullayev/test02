@@ -56,6 +56,7 @@ namespace Products
                     goto Replace;
                 }
             }
+            Replace2:
             try
             { 
             Console.WriteLine("Please insert cost of product.");
@@ -64,6 +65,7 @@ namespace Products
             catch
             {
                 Console.WriteLine("Please insert number.");
+                goto Replace2;
             }
             list.Add(product);
             string Str_Product = ConvertToString(product);
