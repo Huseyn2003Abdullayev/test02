@@ -20,7 +20,6 @@ namespace Cars
         public void DisplayCarsByFilters()
         {
             Cars_Feature cars = new Cars_Feature();
-            Console.WriteLine("If you don't want type anything please type no.");
             Console.WriteLine("Please type car's brand which want to see.");
             Console.WriteLine("If you don't want type anything please type no.");
             string Carbrand = Console.ReadLine();
@@ -53,46 +52,46 @@ namespace Cars
                                 {
                                     if(item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if(CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if(CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -102,46 +101,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -154,46 +153,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -203,46 +202,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -258,46 +257,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -307,46 +306,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -359,46 +358,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -408,46 +407,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -466,46 +465,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -515,46 +514,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -567,46 +566,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -616,46 +615,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -671,46 +670,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -720,46 +719,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -772,46 +771,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
@@ -821,46 +820,46 @@ namespace Cars
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                                 if (CarColour == "no")
                                 {
                                     if (item.CarCost >= CarCost)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                     if (CarCost == 0)
                                     {
-                                        Console.Write(item.CarCode);
-                                        Console.Write(item.CarBrand);
-                                        Console.Write(item.CarModel);
-                                        Console.Write(item.CarType);
-                                        Console.Write(item.CarModelYear);
-                                        Console.Write(item.CarColour);
-                                        Console.Write(item.CarCost);
+                                        Console.Write(item.CarCode + "|");
+                                        Console.Write(item.CarBrand + "|");
+                                        Console.Write(item.CarModel + "|");
+                                        Console.Write(item.CarType + "|");
+                                        Console.Write(item.CarModelYear + "|");
+                                        Console.Write(item.CarColour + "|");
+                                        Console.Write(item.CarCost + "|" + "\n");
                                     }
                                 }
                             }
