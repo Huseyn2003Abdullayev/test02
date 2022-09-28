@@ -38,835 +38,485 @@ namespace Cars
             Console.WriteLine("Please type car's cost which want to see.");
             Console.WriteLine("If you don't want type anything please type 0.");
             int CarCost = Convert.ToInt32(Console.ReadLine());
-            foreach (var item in list)
-            {
-                if(item.CarBrand == Carbrand)
+            if(Carbrand != "no")
+            { 
+            list = list.Where(x => x.CarBrand == Carbrand).ToList();
+                if (CarModel != "no")
                 {
-                    if(item.CarModel == CarModel )
+                    list = list.Where(x => x.CarModel == CarModel).ToList();
+                    if (CarType != "no")
                     {
-                        if(item.CarType == CarType)
+                        list = list.Where(x => x.CarType == CarType).ToList();
+                        if (CarModelYear != 0)
                         {
-                            if(item.CarModelYear == CarModelYear)
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
                             {
-                                if(item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if(item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if(CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if(CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if(CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
-                        if(CarType == "no")
+                        else if (CarModelYear == 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
+
                     }
-                    if (CarModel == "no")
+                    else if (CarType == "no")
                     {
-                        if (item.CarType == CarType)
+                        if (CarModelYear != 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
-                        if (CarType == "no")
+                        else if (CarModelYear == 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
                     }
                 }
-                if(Carbrand == "no")
+                else if (CarModel == "no")
                 {
-                    if (item.CarModel == CarModel)
+                    if (CarType != "no")
                     {
-                        if (item.CarType == CarType)
+                        list = list.Where(x => x.CarType == CarType).ToList();
+                        if (CarModelYear != 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
-                        if (CarType == "no")
+                        else if (CarModelYear == 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
+
                     }
-                    if (CarModel == "no")
+                    else if (CarType == "no")
                     {
-                        if (item.CarType == CarType)
+                        if (CarModelYear != 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
-                        if (CarType == "no")
+                        else if (CarModelYear == 0)
                         {
-                            if (item.CarModelYear == CarModelYear)
+                            if (CarColour != "no")
                             {
-                                if (item.CarColour == CarColour)
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
-                            if (CarModelYear == 0)
+                            else if (CarColour == "no")
                             {
-                                if (item.CarColour == CarColour)
+                                if (CarCost != 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
                                 }
-                                if (CarColour == "no")
+                                else if (CarCost == 0)
                                 {
-                                    if (item.CarCost >= CarCost)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
-                                    if (CarCost == 0)
-                                    {
-                                        Console.Write(item.CarCode + "|");
-                                        Console.Write(item.CarBrand + "|");
-                                        Console.Write(item.CarModel + "|");
-                                        Console.Write(item.CarType + "|");
-                                        Console.Write(item.CarModelYear + "|");
-                                        Console.Write(item.CarColour + "|");
-                                        Console.Write(item.CarCost + "|" + "\n");
-                                    }
+
                                 }
                             }
                         }
                     }
                 }
+
             }
+            else if(Carbrand == "no") 
+            {
+                if(CarModel != "no")
+                {
+                    list = list.Where(x => x.CarModel == CarModel).ToList();
+                    if (CarType != "no")
+                    {
+                        list = list.Where(x => x.CarType == CarType).ToList();
+                        if (CarModelYear != 0)
+                        {
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                        else if (CarModelYear == 0)
+                        {
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+
+                    }
+                    else if (CarType == "no")
+                    {
+                        if (CarModelYear != 0)
+                        {
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                        else if (CarModelYear == 0)
+                        {
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                    }
+                }
+              else if(CarModel == "no")
+              {
+                    if(CarType != "no")
+                    {
+                        list = list.Where(x => x.CarType == CarType).ToList();
+                        if (CarModelYear != 0)
+                        {
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                        else if (CarModelYear == 0)
+                        {
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+
+                    }
+                    else if (CarType == "no")
+                    {
+                        if(CarModelYear != 0)
+                        {
+                            list = list.Where(x => x.CarModelYear == CarModelYear).ToList();
+                            if (CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                            else if (CarColour == "no")
+                            {
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                        else if (CarModelYear == 0)
+                        {
+                            if(CarColour != "no")
+                            {
+                                list = list.Where(x => x.CarColour == CarColour).ToList();
+                                if (CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                                else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                           else if (CarColour == "no")
+                            {
+                                if(CarCost != 0)
+                                {
+                                    list = list.Where(x => x.CarCost == CarCost).ToList();
+                                }
+                               else if (CarCost == 0)
+                                {
+
+                                }
+                            }
+                        }
+                    }
+              }
+            }
+
         }
         public void DisplayAllCars()
         {
