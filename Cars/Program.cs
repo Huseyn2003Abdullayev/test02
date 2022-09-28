@@ -11,6 +11,7 @@ Console.WriteLine("2.Update car.");
 Console.WriteLine("3.Delete car.");
 Console.WriteLine("4.Display all cars.");
 Console.WriteLine("5.Display cars by brand.");
+Console.WriteLine("6.Order by cost.");
 int OperationNumber = 0;
 try
 {

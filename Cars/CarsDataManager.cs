@@ -17,6 +17,21 @@ namespace Cars
             OpenFileAndReadToList();
             DisplayAllCars();
         }
+        public void DisplayCarsByCost()
+        {
+            Console.WriteLine("What do you want?");
+            Console.WriteLine("1.From low to high.");
+            Console.WriteLine("2.From high to low.");
+            string Answer = Console.ReadLine();
+            if (Answer == "1")
+            {
+                list = list.OrderBy(x => x.CarCost).ToList();
+            }
+       else if(Answer == "2")
+       {
+                list = list.OrderByDescending(x => x.CarCost).ToList();
+       }
+        }
         public void DisplayCarsByFilters()
         {
             Cars_Feature cars = new Cars_Feature();
