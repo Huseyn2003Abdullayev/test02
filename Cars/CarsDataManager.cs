@@ -536,7 +536,7 @@ namespace Cars
         public void DisplayAllCars()
         {
             string StrList = ConvertListToString(list);
-            Console.WriteLine(StrList);
+            Console.WriteLine(StrList.PadRight(35,' '));
         }
         public void SelectbyCode(string code)
         {
@@ -670,12 +670,13 @@ namespace Cars
         string ConvertToString(Cars_Feature cars)
         {
             string Str_Car = string.Empty;
-            Str_Car = Str_Car + cars.CarCode + "|";
-            Str_Car = Str_Car + cars.CarBrand + "|";
-            Str_Car = Str_Car + cars.CarModel + "|";
-            Str_Car = Str_Car + cars.CarModelYear.ToString() + "|";
-            Str_Car = Str_Car + cars.CarColour + "|";
-            Str_Car = Str_Car + cars.CarCost.ToString() + "|";
+            Str_Car = Str_Car + cars.CarCode.PadRight(5, ' ') + "|";
+            Str_Car = Str_Car + cars.CarBrand.PadRight(20, ' ')  + "|";
+            Str_Car = Str_Car + cars.CarModel.PadRight(15, ' ')  + "|";
+            Str_Car = Str_Car + cars.CarType.PadRight(15, ' ') + "|";
+            Str_Car = Str_Car + cars.CarModelYear.ToString().PadRight(4, ' ') + "|";
+            Str_Car = Str_Car + cars.CarColour.PadRight(10, ' ') + "|";
+            Str_Car = Str_Car + cars.CarCost.ToString().PadRight(8, ' ') + "|";
             return Str_Car;
         }
         string ConvertListToString(List<Cars_Feature> list)
@@ -689,19 +690,19 @@ namespace Cars
             foreach (var item in list)
             {
                 int index2 = list.IndexOf(item);
-                Str_Car = Str_Car + item.CarCode + "|";
-                Str_Car = Str_Car + item.CarBrand + "|";
-                Str_Car = Str_Car + item.CarModel + "|";
-                Str_Car = Str_Car + item.CarType + "|";
-                Str_Car = Str_Car + item.CarModelYear.ToString() + "|";
-                Str_Car = Str_Car + item.CarColour + "|";
+                Str_Car = Str_Car + item.CarCode.PadRight(5, ' ') + "|";
+                Str_Car = Str_Car + item.CarBrand.PadRight(20, ' ')  + "|";
+                Str_Car = Str_Car + item.CarModel.PadRight(15, ' ') + "|";
+                Str_Car = Str_Car + item.CarType.PadRight(15, ' ') + "|";
+                Str_Car = Str_Car + item.CarModelYear.ToString().PadRight(4, ' ') + "|";
+                Str_Car = Str_Car + item.CarColour.PadRight(10, ' ') + "|";
                 if (index2 == index)
                 {
-                    Str_Car = Str_Car + item.CarCost.ToString() + "|";
+                    Str_Car = Str_Car + item.CarCost.ToString().PadRight(8, ' ') + "|";
                 }
                 else
                 {
-                    Str_Car = Str_Car + item.CarCost.ToString() + "|" + "\n";
+                    Str_Car = Str_Car + item.CarCost.ToString().PadRight(8, ' ') + "|" + "\n";
                 }
             }
             return Str_Car;
