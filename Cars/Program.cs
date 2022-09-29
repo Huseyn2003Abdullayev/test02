@@ -39,6 +39,9 @@ switch (OperationNumber)
     case 5:
         carsDataManager.DisplayCarsByFilters();
         break;
+    case 6:
+        carsDataManager.DisplayCarsByCost();
+        break;
 }
 Console.WriteLine("What do you want? ");
 Console.WriteLine("1.Continue");
