@@ -105,30 +105,12 @@ namespace Cars
             cars.CarModel = Console.ReadLine();
             Console.WriteLine("Please insert type of car.");
             cars.CarType = Console.ReadLine();
-        Replace5:
-            try
-            {
-                Console.WriteLine("Please insert model year of car.");
-                cars.CarModelYear = Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Please insert number.");
-                goto Replace5;
-            }
+            Console.WriteLine("Please insert model year of car.");
+            checking.CheckNumber(cars.CarModelYear);
             Console.WriteLine("Please insert colour of car.");
             cars.CarColour = Console.ReadLine();
-        Replace2:
-            try
-            {
-                Console.WriteLine("Please insert cost of car.");
-                cars.CarCost = Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Please insert number.");
-                goto Replace2;
-            }
+            Console.WriteLine("Please insert cost of car.");
+            checking.CheckNumber(cars.CarCost);
             list.Add(cars);
             string Str_Product = convertingManager.ConvertToString(cars);
             OpenFileAndWrite(Str_Product);
@@ -136,6 +118,7 @@ namespace Cars
         }
         public void UpdateCar()
         {
+            Checking checking = new Checking();
             Cars_Feature cars = new Cars_Feature();
             Console.WriteLine("Please type car's code which want to update.");
             string Code_Update = Console.ReadLine();
@@ -147,31 +130,13 @@ namespace Cars
             Console.WriteLine("Please enter new type of car.");
             string NewType = Console.ReadLine();
             int NewModelyear = 0;
-        Replace3:
-            try
-            {
-                Console.WriteLine("Please enter new  year of car.");
-                NewModelyear = Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Please insert number.");
-                goto Replace3;
-            }
+            Console.WriteLine("Please enter new  year of car.");
+            checking.CheckNumber(NewModelyear);
             Console.WriteLine("Please enter new colour of car.");
             string NewColour = Console.ReadLine();
             int NewCost = 0;
-        Replace4:
-            try
-            {
-                Console.WriteLine("Please enter new cost of car.");
-                NewCost = Convert.ToInt32(Console.ReadLine());
-            }
-            catch
-            {
-                Console.WriteLine("Please insert number.");
-                goto Replace4;
-            }
+            Console.WriteLine("Please enter new cost of car.");
+            checking.CheckNumber(NewCost);
 
             cars.CarBrand = NewBrand;
             cars.CarModel = NewModel;

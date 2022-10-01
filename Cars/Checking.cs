@@ -29,15 +29,35 @@ namespace Cars
                         cars.CarCode = code;
                     }
                 }
-            } while (Answer == true);
+            } while (Answer == false);
         }
-        public void CheckNumber(string number)
+        public void CheckNumber(int number)
         {
             bool check = false;
             do
             {
+                try
+                {
+                    number = Convert.ToInt32(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("Please insert number.");
+                    check = true;
+                }
+                finally
+                {
+                    if(check == true)
+                    {
+                        check = false;
+                    }
+                    else if (check == false)
+                    {
+                        check = true;
+                    }
 
-            } while (check == true);
+                }
+            } while (check == false);
         }
     }
 
