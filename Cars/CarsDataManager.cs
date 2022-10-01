@@ -23,7 +23,7 @@ namespace Cars
             Console.WriteLine("What do you want?");
             Console.WriteLine("1.From low to high.");
             Console.WriteLine("2.From high to low.");
-            string Answer = Console.ReadLine();
+            string? Answer = Console.ReadLine();
             if (Answer == "1")
             {
                 list = list.OrderBy(x => x.CarCost).ToList();
@@ -94,18 +94,11 @@ namespace Cars
         }
         public void InsertCar()
         {
+            Checking checking = new Checking();
             Cars_Feature cars = new Cars_Feature();
             Console.WriteLine("Please insert code of car.");
-        Replace:
             cars.CarCode = Console.ReadLine();
-            foreach (Cars_Feature item in list)
-            {
-                if (item.CarCode == cars.CarCode)
-                {
-                    Console.WriteLine("Please try again this code exist.");
-                    goto Replace;
-                }
-            }
+            checking.CheckCode(cars.CarCode);
             Console.WriteLine("Please insert brand of car.");
             cars.CarBrand = Console.ReadLine();
             Console.WriteLine("Please insert model of car.");
@@ -150,7 +143,7 @@ namespace Cars
             Console.WriteLine("Please enter new brand of car.");
             string NewBrand = Console.ReadLine();
             Console.WriteLine("Please enter new model of car.");
-            string NewModel = Console.ReadLine();
+            string  NewModel = Console.ReadLine();
             Console.WriteLine("Please enter new type of car.");
             string NewType = Console.ReadLine();
             int NewModelyear = 0;
