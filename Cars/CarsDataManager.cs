@@ -11,11 +11,13 @@ namespace Cars
     internal class CarsDataManager
     {
         private ConvertingManager convertingManager = new ConvertingManager();
-        List<Cars_Feature> list = new List<Cars_Feature>();
+        FileOperations fileOperations = new FileOperations();
+         List<Cars_Feature> list = new List<Cars_Feature>();
         readonly string path_ = @"C:\Users\user\Desktop\Cars.txt";
         public CarsDataManager()
         {
-            OpenFileAndReadToList();
+            //OpenFileAndReadToList();
+            fileOperations.OpenFileAndReadToList(list);
             DisplayAllCars();
         }
         public void DisplayCarsByCost()
@@ -95,6 +97,7 @@ namespace Cars
         public void InsertCar()
         {
             Checking checking = new Checking();
+            EnumOperation enumOperation = new EnumOperation();
             Cars_Feature cars = new Cars_Feature();
             Console.WriteLine("Please insert code of car.");
             cars.CarCode = Console.ReadLine();
@@ -103,17 +106,29 @@ namespace Cars
             cars.CarBrand = Console.ReadLine();
             Console.WriteLine("Please insert model of car.");
             cars.CarModel = Console.ReadLine();
-            Console.WriteLine("Please insert type of car.");
-            cars.CarType = Console.ReadLine();
+            Console.WriteLine("Choose type of car.");
+            Console.WriteLine("1.Sedan.");
+            Console.WriteLine("2.Jeep.");
+            Console.WriteLine("3.Liftback.");
+            Console.WriteLine("4.Hetchback.");
+            int choosenTypeNumber = Convert.ToInt32(Console.ReadLine());
+            enumOperation.Type(choosenTypeNumber);
             Console.WriteLine("Please insert model year of car.");
             checking.CheckNumber(cars.CarModelYear);
-            Console.WriteLine("Please insert colour of car.");
-            cars.CarColour = Console.ReadLine();
+            Console.WriteLine("Choose colour of car.");
+            Console.WriteLine("1.Red.");
+            Console.WriteLine("2.Green.");
+            Console.WriteLine("3.Yellow.");
+            Console.WriteLine("4.White.");
+            Console.WriteLine("5.Black.");
+            int choosenColourNumber = Convert.ToInt32(Console.ReadLine());
+            enumOperation.Colour(choosenColourNumber);
             Console.WriteLine("Please insert cost of car.");
             checking.CheckNumber(cars.CarCost);
             list.Add(cars);
             string Str_Product = convertingManager.ConvertToString(cars);
-            OpenFileAndWrite(Str_Product);
+            // OpenFileAndWrite(Str_Product);
+            fileOperations.OpenFileAndWrite(Str_Product);
             DisplayAllCars();
         }
         public void UpdateCar()
@@ -146,7 +161,8 @@ namespace Cars
             cars.CarCode = Code_Update;
             list.Add(cars);
             string StrList = convertingManager.ConvertListToString(list);
-            OpenFileAndUpdate(StrList);
+            //OpenFileAndUpdate(StrList);
+            fileOperations.OpenFileAndUpdate(StrList);
             DisplayAllCars();
         }
         public void DeleteCar()
@@ -156,7 +172,8 @@ namespace Cars
             string Code_Delete = Console.ReadLine();
             SelectbyCode(Code_Delete);
             string StrList = convertingManager.ConvertListToString(list);
-            OpenFileAndUpdate(StrList);
+            //OpenFileAndUpdate(StrList);
+            fileOperations.OpenFileAndUpdate(StrList);
             DisplayAllCars();
         }
         //Cars_Feature ConvertStringToObject(string str)
@@ -196,7 +213,7 @@ namespace Cars
         //    {
         //        int index2 = list.IndexOf(item);
         //        Str_Car = Str_Car + item.CarCode.PadRight(5, ' ') + "|";
-        //        Str_Car = Str_Car + item.CarBrand.PadRight(20, ' ')  + "|";
+        //        Str_Car = Str_Car + item.CarBrand.PadRight(20, ' ') + "|";
         //        Str_Car = Str_Car + item.CarModel.PadRight(15, ' ') + "|";
         //        Str_Car = Str_Car + item.CarType.PadRight(15, ' ') + "|";
         //        Str_Car = Str_Car + item.CarModelYear.ToString().PadRight(4, ' ') + "|";
@@ -212,28 +229,28 @@ namespace Cars
         //    }
         //    return Str_Car;
         //}
-        public void OpenFileAndWrite(string Str_Car)
-        {
-            // string Path = "@example.txt";
-            using StreamWriter sw = new(path_, append: true);
-            sw.WriteLine(Str_Car);
-        }
-        public void OpenFileAndUpdate(string Str_Car)
-        {
-            // string Path = "@example.txt";
-            File.Delete(path_);
-            // Path.Remove(Convert.ToInt32(Path));
-            OpenFileAndWrite(Str_Car);
-        }
-        void OpenFileAndReadToList()
-        {
-            string[] line = File.ReadAllLines(path_);
+        //public void OpenFileAndWrite(string Str_Car)
+        //{
+        //    // string Path = "@example.txt";
+        //    using StreamWriter sw = new(path_, append: true);
+        //    sw.WriteLine(Str_Car);
+        //}
+        //public void OpenFileAndUpdate(string Str_Car)
+        //{
+        //    // string Path = "@example.txt";
+        //    File.Delete(path_);
+        //    // Path.Remove(Convert.ToInt32(Path));
+        //    OpenFileAndWrite(Str_Car);
+        //}
+        //public void OpenFileAndReadToList(List<Cars_Feature> list)
+        //{
+        //    string[] line = File.ReadAllLines(path_);
 
-            foreach (var item in line)
-            {
-                Cars_Feature car = convertingManager.ConvertStringToObject(item);
-                list.Add(car);
-            }
-        }
+        //    foreach (var item in line)
+        //    {
+        //        Cars_Feature car = convertingManager.ConvertStringToObject(item);
+        //        list.Add(car);
+        //    }
+        //}
     }
 }

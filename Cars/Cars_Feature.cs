@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    internal class Cars_Feature
+    public class Cars_Feature
     {
         public string CarCode { get; set; }
         public string CarBrand { get; set; }

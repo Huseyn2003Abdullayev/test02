@@ -9,6 +9,11 @@ namespace Cars
     public class Checking
     {
         List<Cars_Feature> list = new List<Cars_Feature>();
+        FileOperations fileOperations = new FileOperations();
+        public Checking()
+        {
+            fileOperations.OpenFileAndReadToList(list);
+        }
         public void CheckCode(string code)
         {
             Cars_Feature cars = new Cars_Feature();
@@ -26,7 +31,6 @@ namespace Cars
                     else
                     {
                         Answer = true;
-                        cars.CarCode = code;
                     }
                 }
             } while (Answer == false);
