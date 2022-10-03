@@ -14,7 +14,7 @@ namespace Cars
         {
             fileOperations.OpenFileAndReadToList(list);
         }
-        public void CheckCode(string code)
+        public void CheckCode(string? code)
         {
             Cars_Feature cars = new Cars_Feature();
             bool Answer = false;
@@ -23,7 +23,7 @@ namespace Cars
                 foreach (Cars_Feature item in list)
                 {
                     
-                    if (item.CarCode == code)
+                    if (Convert.ToInt32(item.CarCode) == Convert.ToInt32(code))
                     {
                         Console.WriteLine("Please try again this code exist.");
                         code = Console.ReadLine();
