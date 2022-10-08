@@ -17,9 +17,7 @@ namespace Cars
 
         public CarsDataManager()
         {
-            //OpenFileAndReadToList();
             fileOperations.OpenFileAndReadToList(list);
-            //Console.WriteLine(car.ToString());
             DisplayAllCars();
         }
         public void DisplayCarsByCost()
