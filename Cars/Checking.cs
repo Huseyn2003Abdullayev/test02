@@ -8,22 +8,25 @@ namespace Cars
 {
     public class Checking
     {
-        List<Cars_Feature> list = new List<Cars_Feature>();
+        List<Car> list = new List<Car>();
         FileOperations fileOperations = new FileOperations();
+
         public Checking()
         {
             fileOperations.OpenFileAndReadToList(list);
         }
         public void CheckCode(string? code)
         {
-            Cars_Feature cars = new Cars_Feature();
+            Car car = new Car();
+
             bool Answer = false;
-            do 
+
+            do
             {
-                foreach (Cars_Feature item in list)
+                foreach (Car item in list)
                 {
-                    
-                    if (Convert.ToInt32(item.CarCode) == Convert.ToInt32(code))
+
+                    if (Convert.ToInt32(item.Code) == Convert.ToInt32(code))
                     {
                         Console.WriteLine("Please try again this code exist.");
                         code = Console.ReadLine();
@@ -33,11 +36,17 @@ namespace Cars
                         Answer = true;
                     }
                 }
+
+                if(list.Count < 0)
+                {
+                    Answer = true;
+                }
             } while (Answer == false);
         }
         public void CheckNumber(int number)
         {
             bool check = false;
+
             do
             {
                 try
@@ -51,15 +60,7 @@ namespace Cars
                 }
                 finally
                 {
-                    if(check == true)
-                    {
-                        check = false;
-                    }
-                    else if (check == false)
-                    {
-                        check = true;
-                    }
-
+                    check = !check;
                 }
             } while (check == false);
         }

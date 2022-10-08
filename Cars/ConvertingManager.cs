@@ -8,55 +8,62 @@ namespace Cars
 {
     internal class ConvertingManager
     {
-       public Cars_Feature ConvertStringToObject(string str)
+        public Car ConvertStringToObject(string str)
         {
-            Cars_Feature cars = new Cars_Feature();
+            Car car = new Car();
+
             string[] words = str.Split('|');
-            cars.CarCode = words[0];
-            cars.CarBrand = words[1];
-            cars.CarModel = words[2];
-            cars.CarType = words[3];
-            cars.CarModelYear = Convert.ToInt32(words[4]);
-            cars.CarColour = words[5];
-            cars.CarCost = Convert.ToInt32(words[4]);
-            return cars;
+            car.Code = words[0];
+            car.Brand = words[1];
+            car.Model = words[2];
+            //string CarType = car.Type.ToString();
+            //((int)car.Type) = Convert.ToInt32(words[3]);
+            words[3] = car.Type.ToString();
+            car.ModelYear = Convert.ToInt32(words[4]);
+            words[5]=car.Colour.ToString();
+            car.Cost = Convert.ToInt32(words[6]);
+            return car;
         }
-       public string ConvertToString(Cars_Feature cars)
+        public string ConvertToString(Car car)
         {
             string Str_Car = string.Empty;
-            Str_Car = Str_Car + cars.CarCode.PadRight(5, ' ') + "|";
-            Str_Car = Str_Car + cars.CarBrand.PadRight(20, ' ') + "|";
-            Str_Car = Str_Car + cars.CarModel.PadRight(15, ' ') + "|";
-            Str_Car = Str_Car + cars.CarType.PadRight(15, ' ') + "|";
-            Str_Car = Str_Car + cars.CarModelYear.ToString().PadRight(4, ' ') + "|";
-            Str_Car = Str_Car + cars.CarColour.PadRight(10, ' ') + "|";
-            Str_Car = Str_Car + cars.CarCost.ToString().PadRight(8, ' ') + "|";
+
+            Str_Car = Str_Car + car.Code.PadRight(5, ' ') + "|";
+            Str_Car = Str_Car + car.Brand.PadRight(20, ' ') + "|";
+            Str_Car = Str_Car + car.Model.PadRight(15, ' ') + "|";
+            Str_Car = Str_Car + car.Type.ToString().PadRight(15, ' ') + "|";
+            Str_Car = Str_Car + car.ModelYear.ToString().PadRight(4, ' ') + "|";
+            Str_Car = Str_Car + car.Colour.ToString().PadRight(10, ' ') + "|";
+            Str_Car = Str_Car + car.Cost.ToString().PadRight(8, ' ') + "|";
             return Str_Car;
         }
-       public string ConvertListToString(List<Cars_Feature> list)
+        public string ConvertListToString(List<Car> list)
         {
             string Str_Car = string.Empty;
             int index = 0;
+
             foreach (var item in list)
             {
                 index = list.IndexOf(item);
             }
+
             foreach (var item in list)
             {
                 int index2 = list.IndexOf(item);
-                Str_Car = Str_Car + item.CarCode.PadRight(5, ' ') + "|";
-                Str_Car = Str_Car + item.CarBrand.PadRight(20, ' ') + "|";
-                Str_Car = Str_Car + item.CarModel.PadRight(15, ' ') + "|";
-                Str_Car = Str_Car + item.CarType.PadRight(15, ' ') + "|";
-                Str_Car = Str_Car + item.CarModelYear.ToString().PadRight(4, ' ') + "|";
-                Str_Car = Str_Car + item.CarColour.PadRight(10, ' ') + "|";
+                Str_Car = Str_Car + item.Code.PadRight(5, ' ') + "|";
+                Str_Car = Str_Car + item.Brand.PadRight(20, ' ') + "|";
+                Str_Car = Str_Car + item.Model.PadRight(15, ' ') + "|";
+                Str_Car = Str_Car + item.Type.ToString().PadRight(15, ' ') + "|";
+                Str_Car = Str_Car + item.ModelYear.ToString().PadRight(4, ' ') + "|";
+                Str_Car = Str_Car + item.Colour.ToString().PadRight(10, ' ') + "|";
+
                 if (index2 == index)
                 {
-                    Str_Car = Str_Car + item.CarCost.ToString().PadRight(8, ' ') + "|";
+                    Str_Car = Str_Car + item.Cost.ToString().PadRight(8, ' ') + "|";
                 }
                 else
                 {
-                    Str_Car = Str_Car + item.CarCost.ToString().PadRight(8, ' ') + "|" + "\n";
+                    Str_Car = Str_Car + item.Cost.ToString().PadRight(8, ' ') + "|" + "\n";
                 }
             }
             return Str_Car;

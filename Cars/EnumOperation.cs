@@ -1,70 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using static Cars.EnumsCollections;
 
 namespace Cars
 {
     public class EnumOperation
     {
-        Cars_Feature cars = new Cars_Feature();
-        public void Colour(int number)
+        Car car = new Car();
+
+        public void Colour(Colours number)
         {
-             number = Convert.ToInt32(Console.ReadLine());
             switch (number)
             {
-                case ((int)colours.Red):
-                    cars.CarColour = Convert.ToString(colours.Red);
+                case Colours.Red:
+                    car.Colour = Colours.Red;
                     break;
-                case ((int)colours.Green):
-                    cars.CarColour = Convert.ToString(colours.Green);
+                case Colours.Green:
+                    car.Colour = Colours.Green;
                     break;
-                case ((int)colours.Yellow):
-                    cars.CarColour = Convert.ToString(colours.Yellow);
+                case Colours.Yellow:
+                    car.Colour = Colours.Yellow;
                     break;
-                case ((int)colours.White):
-                    cars.CarColour = Convert.ToString(colours.White);
+                case Colours.White:
+                    car.Colour = Colours.White;
                     break;
-                case ((int)colours.Black):
-                    cars.CarColour = Convert.ToString(colours.Black);
+                case Colours.Black:
+                    car.Colour = Colours.Black;
                     break;
             }
         }
-        public void Type(int number)
+        public void Type(Types number)
         {
-            number = Convert.ToInt32(Console.ReadLine());
             switch (number)
             {
-                case ((int)types.Sedan):
-                    cars.CarType = types.Sedan.ToString();
+                case Types.Sedan:
+                    car.Type = Types.Sedan;
                     break;
-                case ((int)types.Jeep):
-                    cars.CarType = types.Jeep.ToString();
+                case Types.Jeep:
+                    car.Type = Types.Jeep;
                     break;
-                case ((int)types.Liftback):
-                    cars.CarType = types.Liftback.ToString();
+                case Types.Liftback:
+                    car.Type = Types.Liftback;
                     break;
-                case ((int)types.Hetchbek):
-                    cars.CarType = types.Hetchbek.ToString();
+                case Types.Hetchbek:
+                    car.Type = Types.Hetchbek;
                     break;
             }
         }
-        public enum colours
-        {
-            Red = 1,
-            Green = 2,
-            Yellow = 3,
-            White = 4,
-            Black = 5
-        }
-        public enum types
-        {
-            Sedan = 1,
-            Jeep = 2,
-            Liftback = 3,
-            Hetchbek = 4
-        }
+        
     }
 }

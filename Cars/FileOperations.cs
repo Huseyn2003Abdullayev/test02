@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Cars
 {
-    public class FileOperations 
+    public class FileOperations
     {
         private ConvertingManager convertingManager = new ConvertingManager();
-        public List<Cars_Feature> list = new List<Cars_Feature>();
+        public List<Car> list = new List<Car>();
         readonly string path_ = @"C:\Users\user\Desktop\Cars.txt";
+
         public void OpenFileAndWrite(string Str_Car)
         {
             // string Path = "@example.txt";
@@ -25,15 +26,16 @@ namespace Cars
             // Path.Remove(Convert.ToInt32(Path));
             OpenFileAndWrite(Str_Car);
         }
-        public void OpenFileAndReadToList(List<Cars_Feature> list)
+        public void OpenFileAndReadToList(List<Car> list)
         {
             string[] line = File.ReadAllLines(path_);
 
             foreach (var item in line)
             {
-                Cars_Feature car = convertingManager.ConvertStringToObject(item);
+                Car car = convertingManager.ConvertStringToObject(item);
                 list.Add(car);
             }
         }
     }
 }
+
