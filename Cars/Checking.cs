@@ -43,7 +43,7 @@ namespace Cars
                 }
             } while (Answer == false);
         }
-        public void CheckNumber(int number)
+        public int CheckNumber(int number)
         {
             bool check = false;
 
@@ -63,6 +63,8 @@ namespace Cars
                     check = !check;
                 }
             } while (check == false);
+
+            return number;
         }
     }
 
