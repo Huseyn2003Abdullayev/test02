@@ -13,7 +13,7 @@ namespace Cars
         public List<Car> list = new List<Car>();
         readonly string path_ = @"C:\Users\user\Desktop\Cars.txt";
 
-        protected FileOperations()
+        public FileOperations()
         {
              if(!File.Exists(path_))
             {
