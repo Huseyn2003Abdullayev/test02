@@ -123,7 +123,7 @@ namespace Cars
             enumOperation.Type((Types)choosenTypeNumber);
 
             Console.WriteLine("Please insert model year of car.");
-            checking.CheckNumber(car.ModelYear);
+            car.ModelYear = checking.CheckNumber(car.ModelYear);
 
             Console.WriteLine("Choose colour of car.");
             Console.WriteLine("1.Red.");
@@ -136,7 +136,7 @@ namespace Cars
             enumOperation.Colour((Colours)choosenColourNumber);
 
             Console.WriteLine("Please insert cost of car.");
-            checking.CheckNumber(car.Cost);
+            car.Cost = checking.CheckNumber(car.Cost);
 
             list.Add(car);
 
@@ -172,7 +172,7 @@ namespace Cars
             enumOperation.Type((Types)choosenTypesNumber);
 
             Console.WriteLine("Please enter new  year of car.");
-            checking.CheckNumber(car.ModelYear);
+            car.ModelYear = checking.CheckNumber(car.ModelYear);
 
             Console.WriteLine("Please enter new colour of car.");
             Console.WriteLine("1.Red.");
@@ -184,7 +184,7 @@ namespace Cars
             enumOperation.Colour((Colours)choosenColourNumber);
 
             Console.WriteLine("Please enter new cost of car.");
-            checking.CheckNumber(car.Cost);
+            car.Cost = checking.CheckNumber(car.Cost);
 
             list.Add(car);
 

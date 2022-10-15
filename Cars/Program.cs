@@ -16,7 +16,7 @@ do
     Console.WriteLine("5.Display cars by brand.");
     Console.WriteLine("6.Order by cost.");
     int OperationNumber = 0;
-    checking.CheckNumber(OperationNumber);
+    OperationNumber = checking.CheckNumber(OperationNumber);
     Console.Clear();
     switch (OperationNumber)
     {
