@@ -37,7 +37,7 @@ namespace Cars
                     }
                 }
 
-                if(list.Count < 0)
+                if(list.Count <= 0)
                 {
                     Answer = true;
                 }
