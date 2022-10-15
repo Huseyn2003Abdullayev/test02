@@ -15,17 +15,19 @@ namespace Cars
 
         public FileOperations()
         {
-             if(!File.Exists(path_))
+            if (!File.Exists(path_))
             {
-                File.Create(path_);
+                File.Create(path_).Close();
             }
         }
+
         public void OpenFileAndWrite(string Str_Car)
         {
             // string Path = "@example.txt";
             using StreamWriter sw = new(path_, append: true);
             sw.WriteLine(Str_Car);
         }
+
         public void OpenFileAndUpdate(string Str_Car)
         {
             // string Path = "@example.txt";
@@ -33,6 +35,7 @@ namespace Cars
             // Path.Remove(Convert.ToInt32(Path));
             OpenFileAndWrite(Str_Car);
         }
+
         public void OpenFileAndReadToList(List<Car> list)
         {
             string[] line = File.ReadAllLines(path_);

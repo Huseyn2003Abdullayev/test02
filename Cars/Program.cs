@@ -2,10 +2,14 @@
 using Cars;
 
 CarsDataManager carsDataManager = new CarsDataManager();
+
 Checking checking = new Checking();
+
 Console.WriteLine("Please enter your name.");
 string? name = Console.ReadLine();
+
 bool Quality = false;
+
 do
 {
     Console.WriteLine("Hello " + name + ".");
@@ -15,9 +19,12 @@ do
     Console.WriteLine("4.Display all cars.");
     Console.WriteLine("5.Display cars by brand.");
     Console.WriteLine("6.Order by cost.");
+
     int OperationNumber = 0;
     OperationNumber = checking.CheckNumber(OperationNumber);
+
     Console.Clear();
+
     switch (OperationNumber)
     {
         case 1:
@@ -39,12 +46,16 @@ do
             carsDataManager.DisplayCarsByCost();
             break;
     }
+
     Console.WriteLine("What do you want? ");
     Console.WriteLine("1.Continue");
     Console.WriteLine("2.Leave");
+
     int Answer = 0;
     checking.CheckNumber(Answer);
+
     Console.Clear();
+
     switch (Convert.ToInt32(Answer))
     {
         case 1:
@@ -55,4 +66,5 @@ do
             break;
     }
 } while (Quality == false);
+
 Console.ReadKey();
