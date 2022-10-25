@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Cars.EnumsCollections;
 
 namespace Cars
 {
@@ -17,10 +18,12 @@ namespace Cars
             car.Brand = words[1];
             car.Model = words[2];
             //string CarType = car.Type.ToString();
-            //((int)car.Type) = Convert.ToInt32(words[3]);
-            words[3] = car.Type.ToString();
+            //CarType = words[3];
+            //words[3] = car.Type.ToString();
+           // car.Type = (Types)Convert.ChangeType(words[3], typeof(Types));
+            car.Type = (Types)Enum.Parse(typeof(Types),words[3],true);
             car.ModelYear = Convert.ToInt32(words[4]);
-            words[5]=car.Colour.ToString();
+            car.Colour = (Colours)Enum.Parse(typeof(Colours), words[5], true);
             car.Cost = Convert.ToInt32(words[6]);
             return car;
         }

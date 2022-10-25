@@ -92,12 +92,14 @@ namespace Cars
             string StrList = convertingManager.ConvertListToString(list);
             Console.WriteLine(StrList);
         }
-        public void SelectbyCode(string code)
+        public void SelectbyCodeAndDelete(string code)
         {
             var itemToRemove = list.SingleOrDefault(r => r.Code == code);
 
             if (itemToRemove != null)
                 list.Remove(itemToRemove);
+            string StrList = convertingManager.ConvertListToString(list);
+            fileOperations.OpenFileAndUpdate(StrList);
         }
         public void InsertCar()
         {
@@ -120,7 +122,8 @@ namespace Cars
             Console.WriteLine("4.Hetchback.");
 
             int choosenTypeNumber = Convert.ToInt32(Console.ReadLine());
-            enumOperation.Type((Types)choosenTypeNumber);
+            //enumOperation.Type((Types)choosenTypeNumber);
+            car.Type = (Types)choosenTypeNumber;
 
             Console.WriteLine("Please insert model year of car.");
             car.ModelYear = checking.CheckNumber(car.ModelYear);
@@ -133,7 +136,8 @@ namespace Cars
             Console.WriteLine("5.Black.");
 
             int choosenColourNumber = Convert.ToInt32(Console.ReadLine());
-            enumOperation.Colour((Colours)choosenColourNumber);
+            //enumOperation.Colour((Colours)choosenColourNumber);
+            car.Colour = (Colours)choosenColourNumber;
 
             Console.WriteLine("Please insert cost of car.");
             car.Cost = checking.CheckNumber(car.Cost);
@@ -154,7 +158,7 @@ namespace Cars
 
             Console.WriteLine("Please type car's code which want to update.");
             string Code_Update = Console.ReadLine();
-            SelectbyCode(Code_Update);
+            SelectbyCodeAndDelete(Code_Update.PadRight(5, ' '));
             car.Code = Code_Update;
 
             Console.WriteLine("Please enter new brand of car.");
@@ -169,7 +173,7 @@ namespace Cars
             Console.WriteLine("3.Liftback.");
             Console.WriteLine("4.Hetchback.");
             int choosenTypesNumber = Convert.ToInt32(Console.ReadLine());
-            enumOperation.Type((Types)choosenTypesNumber);
+            car.Type = (Types)choosenTypesNumber;
 
             Console.WriteLine("Please enter new  year of car.");
             car.ModelYear = checking.CheckNumber(car.ModelYear);
@@ -181,7 +185,7 @@ namespace Cars
             Console.WriteLine("4.White.");
             Console.WriteLine("5.Black.");
             int choosenColourNumber = Convert.ToInt32(Console.ReadLine());
-            enumOperation.Colour((Colours)choosenColourNumber);
+            car.Colour = (Colours)choosenColourNumber;
 
             Console.WriteLine("Please enter new cost of car.");
             car.Cost = checking.CheckNumber(car.Cost);
@@ -200,7 +204,7 @@ namespace Cars
 
             Console.WriteLine(" Please type car's code which want to delete.");
             string Code_Delete = Console.ReadLine();
-            SelectbyCode(Code_Delete);
+            SelectbyCodeAndDelete(Code_Delete.PadRight(5, ' '));
 
             string StrList = convertingManager.ConvertListToString(list);
             //OpenFileAndUpdate(StrList);

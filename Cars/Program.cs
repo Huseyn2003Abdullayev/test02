@@ -65,6 +65,6 @@ do
             Quality = true;
             break;
     }
-} while (Quality == false);
+} while (Quality);
 
 Console.ReadKey();
